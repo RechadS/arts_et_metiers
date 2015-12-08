@@ -1,15 +1,16 @@
 <?php 
 
 include_once("includes/header.php");
-include_once("includes/footer.php");
+
 
 $html = "
 	<div class='container'>
 		
 		<div class='slider'>
 			<img src='../img/IMG_0137.jpg'>	
+			<img class='logo_play' src='../img/play_logo.png'>
 		</div>	
-		<img class='logo_play' src='../img/play_logo.png'>
+		
 		<iframe src='https://www.google.com/maps/d/u/0/embed?mid=zWtSlTMSphxg.kIx5TmkZA0OA' class='maps'></iframe>
 		<div class='information'>
 						<div class='information-title'> <i class='fa fa-map-signs'></i> Autres quartiers à visiter</div>
@@ -24,8 +25,10 @@ $html = "
 Information complémentaires</div>
 						
 		</div>
+	</div>
 ";
 
 echo $html; 
 
 
+include_once("includes/footer.php");

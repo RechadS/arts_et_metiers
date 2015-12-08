@@ -5,18 +5,17 @@
 ?>
 
 
-	<div class="block">
+	<div class="block container">
 		<div class="info">
-				<img src="chemin" alt="description">
-				<p> Bienvenue sur la rubrique historique .<br>
+				<p> Bienvenue sur la rubrique historique<br>
 				
 				</p>
 		</div>	
 
-		<article class="photo row masonry-container">
-			<div class="gamma-container gamma-loading" id="gamma-container">
+		<article class="main row masonry-container">
+		<div class="gamma-container gamma-loading" id="gamma-container">
 
-					<ul class="gamma-gallery">
+			<ul class="gamma-gallery">
 
 						
 			<?php
@@ -33,15 +32,15 @@
 			    <li>
 			    	<div data-alt="<?php echo $donnees['titre']; ?>" data-description="<h3><?php echo $donnees['titre']; ?></h3>
 			          <p><?php echo $donnees['contenu']; ?></p>>" data-max-width="1800" data-max-height="1350">
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg" data-min-width="1300"></div>
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg" data-min-width="1000"></div>
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg" data-min-width="700"></div>
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg" data-min-width="300"></div>
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg" data-min-width="200"></div>
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg" data-min-width="140"></div>
-						<div data-src="http://localhost/Arts_et_Metiers/img/metro1.jpg"></div>
+						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="1300"></div>
+						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="1000"></div>
+						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="700"></div>
+						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="300"></div>
+						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="200"></div>
+						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="140"></div>
+						<div data-src="<?php echo $donnees['image']; ?>"></div>
 						<noscript>
-							<img src="http://localhost/Arts_et_Metiers/img/metro1.jpg" alt="img03"/>
+							<img src="<?php echo $donnees['image']; ?>" alt="img03"/>
 						</noscript>
 					</div>
 			    </li>  
@@ -53,9 +52,9 @@
 			$reponse->closeCursor(); // Termine le traitement de la requête
 
 			?>
-		</article>
+		</div>
+	</article>
 	</div>
-
 
 <?php include("includes/footer.php");?>
 <script type="text/javascript">

@@ -164,6 +164,7 @@ button.gamma-btn-sspause:before {
 	z-index: 10000;
 	text-align: center;
 	display:none;
+	background: rgba(0,0,0,0.7);
 }
 
 .gamma-overlay {

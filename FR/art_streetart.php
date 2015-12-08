@@ -5,56 +5,57 @@
 ?>
 
 
-	<div class="block">
+	<div class="block container">
 		<div class="info">
-				<img src="chemin" alt="description">
-				<p> Bienvenue sur la rubrique historique .<br>
+				<p> Bienvenue sur la rubrique art / street art <br>
 				
 				</p>
 		</div>	
 
-		<div class="photo main">
-		<div class="gamma-container gamma-loading" id="gamma-container">
+		<article class="main row masonry-container">
+			<div class="gamma-container gamma-loading" id="gamma-container">
 
-			<ul class="gamma-gallery">
+				<ul class="gamma-gallery">
 
-						
-			<?php
-			$pdo = myPDO::getInstance();
+							
+				<?php
+				$pdo = myPDO::getInstance();
 
-			// On récupère tout le contenu de la table jeux_video
-			$reponse = $pdo->query("SELECT * FROM lieu where categorie='art'");
+				// On récupère tout le contenu de la table jeux_video
+				$reponse = $pdo->query("SELECT * FROM lieu where categorie='art'");
 
-			// On affiche chaque entrée une à une
-			while ($donnees = $reponse->fetch())
-			{
-			?>
+				// On affiche chaque entrée une à une
+				while ($donnees = $reponse->fetch())
+				{
+				?>
 
-			    <li>
-			    	<div data-alt="<?php echo $donnees['titre']; ?>" data-description="<h3><?php echo $donnees['titre']; ?></h3>
-			          <p><?php echo $donnees['contenu']; ?></p>>" data-max-width="1800" data-max-height="1350">
-						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="1300"></div>
-						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="1000"></div>
-						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="700"></div>
-						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="300"></div>
-						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="200"></div>
-						<div data-src="<?php echo $donnees['image']; ?>" data-min-width="140"></div>
-						<div data-src="<?php echo $donnees['image']; ?>"></div>
-						<noscript>
-							<img src="<?php echo $donnees['image']; ?>" alt="img03"/>
-						</noscript>
-					</div>
-			    </li>  
+				    <li>
+				    	<div data-alt="<?php echo $donnees['titre']; ?>" data-description="<h3><?php echo $donnees['titre']; ?></h3>
+				          <p><?php echo $donnees['contenu']; ?></p>>" data-max-width="1800" data-max-height="1350">
+							<div data-src="<?php echo $donnees['image']; ?>" data-min-width="1300"></div>
+							<div data-src="<?php echo $donnees['image']; ?>" data-min-width="1000"></div>
+							<div data-src="<?php echo $donnees['image']; ?>" data-min-width="700"></div>
+							<div data-src="<?php echo $donnees['image']; ?>" data-min-width="300"></div>
+							<div data-src="<?php echo $donnees['image']; ?>" data-min-width="200"></div>
+							<div data-src="<?php echo $donnees['image']; ?>" data-min-width="140"></div>
+							<div data-src="<?php echo $donnees['image']; ?>"></div>
+							<noscript>
+								<img src="<?php echo $donnees['image']; ?>" alt="img03"/>
+							</noscript>
+						</div>
+				    </li>  
 
 
-			<?php
-			}
+				<?php
+				}
 
-			$reponse->closeCursor(); // Termine le traitement de la requête
+				$reponse->closeCursor(); // Termine le traitement de la requête
 
-			?>
-		</div>
-	</div>
+				?>
+				</ul>
+			</div>
+	</article>
+</div>
 
 
 <?php include("includes/footer.php");?>
