@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -651,3 +652,7 @@
   </body>
 </html>
 
+=======
+# arts_et_metiers
+Un site pour déccouvrir le quartier des arts et métiers
+>>>>>>> 203e0df7a819ca6b90f063d467855698b350eeea
